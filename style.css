@@ -74,3 +74,8 @@ ul {
 .card-text {
   font-size: small;
 }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
