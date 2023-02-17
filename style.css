@@ -1,0 +1,76 @@
+body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.all {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 0px auto;
+  padding: 14px;
+  max-width: 200px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.dashboard {
+  padding: 20px;
+  height: 500px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  background-color: lightgray;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.city {
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 60px;
+  text-align: right;
+}
+
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -34px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.weather-elements {
+  padding: 18px;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+.card {
+  border: none;
+  margin-top: 20px;
+}
+.card-title {
+  font-size: medium;
+}
+
+.card-text {
+  font-size: small;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid border border-dark p-2">
+<!-- SEARCH  BAR  -->
+  <div class="input-group, search-bar">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-12">
+              <input
+                type="search"
+                placeholder="Search a city..."
+                autofocus="off"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+  </div>
+  <button id="current-button">Current</button>
+    
+      <h1 id="city">Melbourne</h1>
+      <h2 id="timestamp"></h2>
+      <div class="container text-center">
+        <div class="row dashboard">
+          <div class="col-6 temperature">
+            <span id="temperature"></span>
+            <span class="units">
+              <a href="#" id="celcius">°C</a>
+              |
+            <a href="#" id="farenheit">°F</a>
+          </div>
+
+          <!-- DASHBOARD -->
+          <div class="col-6">
+            <div class="row">
+              <ul class="weather-elements">
+                <li><span id="description"></span></li>
+                <li>🌡️Humidity: <span id="humidity"></span>%</li>
+                <li>☔Precipitation: <span id="precipitation"></span>%</li>
+                <li>💨Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- CARDS NEXT 5 DAYS -->
+        <div class="card-group">
+          <div class="card forecast">
+            <div class="card-body">
+              <p>🌤️</p>
+              <h5 class="card-title">Monday</h5>
+              <p class="card-text">20° | 14°</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>🌤️</p>
+              <h5 class="card-title">Tuesday</h5>
+              <p class="card-text">28° | 20°</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>🌤️</p>
+              <h5 class="card-title">Wednesday</h5>
+              <p class="card-text">36° | 21°</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>🌤️</p>
+              <h5 class="card-title">Thursday</h5>
+              <p class="card-text">22° | 14°</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p>🌤️</p>
+              <h5 class="card-title">Friday</h5>
+              <p class="card-text">19° | 13°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
