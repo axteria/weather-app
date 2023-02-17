@@ -1,9 +1,16 @@
 body {
   max-width: 680px;
+  max-height: 5s0px;
   margin: 0 auto;
   padding: 20px;
 }
 
+#app-outline {
+  background-image: url(https://i.pinimg.com/originals/42/40/3f/42403fa82b88b5b63e2d218541580c6a.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .all {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -40,12 +47,13 @@ button {
 }
 
 .temperature {
-  font-size: 60px;
+  padding-top: 26px;
+  font-size: 90px;
   text-align: right;
 }
 
 .units {
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   top: -34px;
 }
@@ -55,7 +63,8 @@ a {
   color: black;
 }
 .weather-elements {
-  padding: 18px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 ul {
@@ -65,7 +74,7 @@ ul {
 
 .card {
   border: none;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 .card-title {
   font-size: medium;
