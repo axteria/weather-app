@@ -27,11 +27,13 @@ h1,
 h2 {
   text-align: center;
   padding: 10px;
+  color: white;
 }
 
 .dashboard {
   padding: 20px;
   height: 500px;
+  color: white;
 }
 
 button {
@@ -41,13 +43,15 @@ button {
   border: 0;
   padding: 10px;
   border-radius: 10px;
+  color: white;
 }
 .city {
   font-weight: bold;
+  color: white;
 }
 
 .temperature {
-  padding-top: 26px;
+  padding-top: 42px;
   font-size: 90px;
   text-align: right;
 }
@@ -56,19 +60,23 @@ button {
   font-size: 18px;
   position: relative;
   top: -34px;
+  color: white;
 }
 
 a {
   text-decoration: none;
   color: black;
-}
-.icon {
-  width: 10%;
+  color: white;
 }
 
 .weather-elements {
-  padding: 20px;
+  padding: 18px;
   font-size: 18px;
+}
+.icon {
+  width: 10%;
+  padding: 0px;
+  margin: 0;
 }
 
 ul {
