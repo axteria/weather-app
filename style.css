@@ -62,9 +62,13 @@ a {
   text-decoration: none;
   color: black;
 }
+.icon {
+  width: 10%;
+}
+
 .weather-elements {
   padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 ul {
