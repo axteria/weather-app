@@ -31,8 +31,10 @@ timestamp.innerHTML = formatDate(currentTime);
 function displayWeather(response) {
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
+  celciusTemp = response.data.main.temp;
+
   // show temp
-  let temp = Math.round(response.data.main.temp);
+  let temp = Math.round(celciusTemp);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = `${temp}`;
 
@@ -69,8 +71,6 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-search("Melbourne");
-
 // CURRENT BUTTON
 function getCoords(position) {
   let lat = position.coords.latitude;
@@ -89,16 +89,22 @@ currentButton.addEventListener("click", showGeolocation);
 // TEMPERATURE UNITS
 function showFarenheit(event) {
   event.preventDefault();
-  let temp = document.querySelector("#temp");
-  temp.innerHTML = 86;
-}
-function showCelcius(event) {
-  event.preventDefault();
-  temp.innerHTML = 30;
+  let currentTemp = document.querySelector("#temperature");
+  let showFarenheit = (celciusTemp * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(showFarenheit);
 }
 
+function showCelcius(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temperature");
+  currentTemp.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
 let farenheit = document.querySelector("#farenheit");
 farenheit.addEventListener("click", showFarenheit);
 
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", showCelcius);
+
+search("Melbourne");
