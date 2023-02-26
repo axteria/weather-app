@@ -1,12 +1,11 @@
 body {
-  max-width: 680px;
-  max-height: 5s0px;
+  width: 680px;
   margin: 0 auto;
   padding: 20px;
 }
 
 #app-outline {
-  background-image: url(https://i.pinimg.com/originals/42/40/3f/42403fa82b88b5b63e2d218541580c6a.png);
+  background-image: url(https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722375/night.pngp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,19 +22,6 @@ body {
   max-width: 200px;
 }
 
-h1,
-h2 {
-  text-align: center;
-  padding: 10px;
-  color: white;
-}
-
-.dashboard {
-  padding: 20px;
-  height: 500px;
-  color: white;
-}
-
 button {
   display: block;
   margin: 0 auto;
@@ -45,48 +31,74 @@ button {
   border-radius: 10px;
   color: white;
 }
-.city {
-  font-weight: bold;
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
   color: white;
 }
 
+h2 {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.dashboard {
+  padding: 20px;
+  height: 300px;
+  color: white;
+}
+
+img {
+  margin-top: -40px;
+}
+
 .temperature {
-  padding-top: 42px;
-  font-size: 90px;
-  text-align: right;
+  text-align: center;
+  font-size: 80px;
+  color: rgb(69, 4, 129);
 }
 
 .units {
   font-size: 18px;
   position: relative;
   top: -34px;
-  color: white;
+  color: rgb(69, 4, 129);
 }
 
 .units-link {
-  color: white;
+  color: rgb(69, 4, 129);
   text-decoration: none;
 }
 
-.weather-elements {
-  padding: 18px;
-  font-size: 18px;
-}
-.icon {
-  width: 10%;
-  padding: 0px;
-  margin: 0;
+.description {
+  margin-top: -50px;
+  font-size: 20px;
 }
 
 ul {
-  list-style: none;
-  text-align: left;
+  margin-top: -70px;
+  margin-bottom: 20px;
 }
 
+li {
+  display: inline;
+  color: white;
+  font-size: 18px;
+  list-style: none;
+  margin: 20px;
+}
+
+.card-group {
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(69, 4, 129);
+}
 .card {
-  border: none;
-  margin: 8px auto;
   background-color: rgba(255, 255, 255, 0.451);
+  border: none;
 }
 .card-title {
   font-size: medium;

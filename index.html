@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="container-fluid border border-dark p-2" id="app-outline">
+    <div class="container-fluid border border-dark h4-2" id="app-outline">
 <!-- SEARCH  BAR  -->
   <div class="input-group, search-bar">
         <form class="search-form" id="search-form">
@@ -33,73 +33,73 @@
           </div>
         </form>
   </div>
-  <button id="current-button">Current</button>
+  <button id="current-button">Current Location</button>
     
-      <h1 id="city">Melbourne</h1>
+      <h1 id="city"></h1>
       <h2 id="timestamp"></h2>
+
+      <!-- TEMPERATURE -->
       <div class="container text-center">
         <div class="row dashboard">
-          <div class="col-6 temperature">
-            <span id="temperature"></span>
+          <div class="col-12">
+            <img src="" id="icon"/>
+            <span class="temperature" id="temperature"></span>
             <span class="units">
               <a href="#" class="units-link" id="celcius">°C</a>
               |
               <a href="#" class="units-link" id="farenheit">°F</a>
-            </div>
-            
-            <!-- DASHBOARD -->
-            <div class="col-6">
-              <div class="row">
-                <ul class="weather-elements">
-                <li>
-                <img src="" class="float-left" id="icon"/>
-                  <span id="description"></span>
-                </li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <!-- <li>☔Precipitation: <span id="precipitation"></span>%</li> -->
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
+          </div>
+
+          <div class="col-12 description">
+            <span id="description"></span>
           </div>
         </div>
 
-        <hr />
+        <div class="col-12">
+          <ul class=>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+        </ul>
+          <!-- <li>☔Precipitation: <span id="precipitation"></span>%</li> -->
+        </div>
+      </div>
+
 
         <!-- CARDS NEXT 5 DAYS -->
         <div class="card-group forecast">
           <div class="card">
             <div class="card-body">
-              <p>🌤️</p>
+              <h4>🌤️</h4>
               <h5 class="card-title">Monday</h5>
-              <p class="card-text">20° | 14°</p>
+              <h4 class="card-text">20° | 14°</h4>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <p>🌤️</p>
+              <h4>🌤️</h4>
               <h5 class="card-title">Tuesday</h5>
-              <p class="card-text">28° | 20°</p>
+              <h4 class="card-text">28° | 20°</h4>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <p>🌤️</p>
+              <h4>🌤️</h4>
               <h5 class="card-title">Wednesday</h5>
-              <p class="card-text">36° | 21°</p>
+              <h4 class="card-text">36° | 21°</h4>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <p>🌤️</p>
+              <h4>🌤️</h4>
               <h5 class="card-title">Thursday</h5>
-              <p class="card-text">22° | 14°</p>
+              <h4 class="card-text">22° | 14°</h4>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <p>🌤️</p>
+              <h4>🌤️</h4>
               <h5 class="card-title">Friday</h5>
-              <p class="card-text">19° | 13°</p>
+              <h4 class="card-text">19° | 13°</h4>
             </div>
           </div>
         </div>
