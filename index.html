@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
-    <div class="container-fluid border border-white h4-2 rounded" id="app-outline">
+<body>
+<div class="container-fluid border border-white h4-2 rounded" id="app-outline">
 <!-- SEARCH  BAR  -->
-  <div class="input-group, search-bar">
+    <div class="input-group, search-bar">
         <form class="search-form" id="search-form">
           <div class="row">
             <div class="col-12">
@@ -32,77 +32,42 @@
             </div>
           </div>
         </form>
-  </div>
-  <button id="current-button">Current Location</button>
+    </div>
+  
+   <button id="current-button">Current Location</button>
     
-      <h1 id="city"></h1>
-      <h2 id="timestamp"></h2>
+    <h1 id="city"></h1>
+    <h2 id="timestamp"></h2>
 
-      <!-- TEMPERATURE -->
-      <div class="container text-center">
-        <div class="row dashboard">
-          <div class="col-12">
-            <img src="" id="icon"/>
-            <span class="temperature" id="temperature"></span>
-            <span class="units">
-              <a href="#" class="units-link" id="celcius">°C</a>
-              |
-              <a href="#" class="units-link" id="farenheit">°F</a>
-            </div>
+    <!-- TEMPERATURE -->
+    <div class="container text-center">
+      <div class="row dashboard">
+        <div class="col-12">
+          <img src="" id="icon"/>
+          <span class="temperature" id="temperature"></span>
+          <span class="units">
+            <a href="#" class="units-link" id="celcius">°C</a>
+            |
+            <a href="#" class="units-link" id="farenheit">°F</a>
+          </span>
+        </div>
         
         <div class="col-12">
           <ul class=>
             <li><span id="description"></span></li>
             <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span> km/h</li>
-        </ul>
-          <!-- <li>☔Precipitation: <span id="precipitation"></span>%</li> -->
+          </ul>
         </div>
       </div>
 
-
-        <!-- CARDS NEXT 5 DAYS -->
-        <div class="card-group forecast">
-          <div class="card">
-            <div class="card-body">
-              <h4>🌤️</h4>
-              <h5 class="card-title">Mon</h5>
-              <h4 class="card-text">20° | 14°</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4>🌤️</h4>
-              <h5 class="card-title">Tues</h5>
-              <h4 class="card-text">28° | 20°</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4>🌤️</h4>
-              <h5 class="card-title">Wed</h5>
-              <h4 class="card-text">36° | 21°</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4>🌤️</h4>
-              <h5 class="card-title">Thurs</h5>
-              <h4 class="card-text">22° | 14°</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4>🌤️</h4>
-              <h5 class="card-title">Fri</h5>
-              <h4 class="card-text">19° | 13°</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer><a href="https://github.com/axteria/weather-app"> Github Code</a></footer>
-
-    <script src="script.js"></script>
-  </body>
+    <!-- FORECAST -->
+    <div id= "forecast"></div>
+  </div>
+</div>
+  
+  <footer><a href="https://github.com/axteria/weather-app"> Github Code</a></footer>
+    
+  <script src="script.js"></script>
+</body>
 </html>

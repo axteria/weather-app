@@ -107,4 +107,31 @@ farenheit.addEventListener("click", showFarenheit);
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", showCelcius);
 
+// FORECAST
+function showForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
+
+  let forecastHTML = `<div class="card-group row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="card">
+            <div class="card-body px-0">
+              <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+              <h5 class="card-title">${day}</h5>
+              <h4 class="card-text"><span class="forecast-max">20°</span> | <span class="forecast-min">14°</span></h4>
+            </div>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 search("Melbourne");
+showForecast();
