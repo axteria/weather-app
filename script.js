@@ -31,10 +31,10 @@ timestamp.innerHTML = formatDate(currentTime);
 function displayWeather(response) {
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
-  celciusTemp = response.data.main.temp;
+  celsiusTemp = response.data.main.temp;
 
   // show temp
-  let temp = Math.round(celciusTemp);
+  let temp = Math.round(celsiusTemp);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = `${temp}`;
 
@@ -87,25 +87,25 @@ let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", showGeolocation);
 
 // TEMPERATURE UNITS
-function showFarenheit(event) {
+function showFahrenheit(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temperature");
-  let showFarenheit = (celciusTemp * 9) / 5 + 32;
-  currentTemp.innerHTML = Math.round(showFarenheit);
+  let showFahrenheit = (celsiusTemp * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(showFahrenheit);
 }
 
-function showCelcius(event) {
+function showCelsius(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = Math.round(celciusTemp);
+  currentTemp.innerHTML = Math.round(celsiusTemp);
 }
 
-let celciusTemp = null;
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", showFarenheit);
+let celsiusTemp = null;
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);
 
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", showCelcius);
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);
 
 // FORECAST
 function showForecast() {
