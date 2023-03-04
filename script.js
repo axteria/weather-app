@@ -110,31 +110,36 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
 // FORECAST
-function showForecast(response) {
+function displayForecast(response) {
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
 
-  // let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
-
-  let forecastHTML = `<div class="card-group row">`;
+  let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `<div class="card">
-            <div class="card-body px-0">
-              <img
-          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${forecastDay.dt}</div>
+        <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           alt=""
           width="42"
         />
-              <h5 class="card-title">${forecastDay.dt}</h5>
-              <h4 class="card-text">
-                <span class="forecast-min">${forecastDay.temp.min}°</span> 
-                | 
-                <span class="forecast-max">${forecastDay.temp.max}°</span></h4>
-            </div>
-          </div>`;
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+           | 
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+        </div>
+      </div>
+  `;
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -142,6 +147,7 @@ function showForecast(response) {
 }
 
 function getForecast(coordinates) {
+  console.log(coordinates);
   let apiKey = "2ff29bed3181c3526c35cc5408037f85";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
